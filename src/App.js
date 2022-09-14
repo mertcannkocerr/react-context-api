@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Navbar } from "./components/Navbar";
+import { ToDoList } from "./components/ToDoList";
 
-function App() {
+const App = () => {
+  // This app shows how Context API works.
+  // We need to show To Do List item count on Navigation bar.
+  // Without using Lifting the State Up method, we can achieve that with
+  // using Context API.
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <ToDoList />
     </div>
   );
-}
+};
 
 export default App;
